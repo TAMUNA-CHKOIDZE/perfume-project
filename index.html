@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://kit.fontawesome.com/085bce8105.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>card page</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="header_top">
+                <a href="#" class="header_logo_link">
+                    <img src="./images/makeup-logo.png" alt="makeup-logo" width="60">
+                </a>
+                <!-- search  -->
+                <form id="search-form" class="search-form">
+                    <input type="text" name="search" id="search" class="search-input" placeholder="Search Product">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <!-- search-იც უნდა ჩავამატო -->
+                <div class="header_icons">
+                    <i class="fa-solid fa-globe header_icon"></i>
+                    <i class="fa-regular fa-heart header_icon"></i>
+                    <button class="cart_btn">
+                        <span class="cart_btn_result">0</span>
+                        <i class="fa-solid fa-cart-shopping header_icon"></i>
+                    </button>
+                    <i class="fa-regular fa-user header_icon"></i>
+                </div>
+
+                <!-- ენის შეცვლა: https://hohkfuyuhi.github.io/JS-language-changer/ -->
+                <!-- ან ეს  -->
+                <!-- https://www.w3schools.com/howto/howto_google_translate.asp -->
+            </div>
+            <div class="header_bottom">
+                <nav class="header_nav">
+                    <ul class="header_ul">
+                        <li>
+                            <a href="#" class="header_page_link">All</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header_page_link">Makeup</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header_page_link">Skin Care</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header_page_link">Hair Care</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <div class="card_container" id="cardContainer"></div>
+            <div class="pageNumbers" id="paginationContainer"></div>
+        </main>
+        <!-- footer  -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h3 class="footer-section_title">About Us</h3>
+                    <p class="footer-section-text">We provide high-quality cosmetics made with natural ingredients.
+                        Discover your beauty with our
+                        eco-friendly products.</p>
+                </div>
+
+                <div class="footer-section links">
+                    <h3 class="footer-section_title">Quick Links</h3>
+                    <ul>
+                        <li><a href="/shop" class="footer-section-text">Shop</a></li>
+                        <li><a href="/about" class="footer-section-text">About</a></li>
+                        <li><a href="/blog" class="footer-section-text">Blog</a></li>
+                        <li><a href="/contact" class="footer-section-text">Contact</a></li>
+                        <li><a href="/faq" class="footer-section-text">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter-social">
+                    <div class="footer-section newsletter">
+                        <h3 class="footer-section_title">Subscribe to Our Newsletter</h3>
+                        <form action="/subscribe" method="POST" name="subscribe" class="subscribe-form">
+                            <input type="email" name="email" placeholder="Enter your email" required  class="subscribe-input"/>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-bottom-text">&copy; 2025 Your Cosmetics Brand. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

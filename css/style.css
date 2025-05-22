@@ -1,0 +1,358 @@
+/* css variables */
+:root {
+    --primary-color-darkest: #743b2e;
+    --primary-color-darker: #c78172;
+    --primary-color-lighter: #e7c3ba;
+    --secondary-color: #f7f7f7;
+    --whithe-color: #ffffff;
+    --dangerColor: #c71111;
+    --light-green: #d2e6c9;
+    --font: "Lato", sans-serif;
+    --font-size20: 20px;
+}
+
+body {
+    font-family: var(--font);
+}
+
+/* container */
+.container {
+    width: min(100%, 1440px);
+    margin: auto;
+}
+
+/* header */
+.header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 80px;
+    background: var(--primary-color-darkest);
+}
+
+.search-form {
+    width: 50%;
+    height: 40px;
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+    padding-left: 16px;
+    background-color: var(--secondary-color);
+}
+
+.search-btn {
+    width: 46px;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    background: var(--light-green);
+    color: var(--primary-color-darkest);
+    font-size: 16px;
+}
+
+.header_bottom {
+    background-color: var(--primary-color-darker);
+    padding: 16px 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.header_ul {
+    display: flex;
+    column-gap: 80px;
+}
+
+.header_page_link {
+    font-weight: 400;
+    font-size: var(--font-size20);
+    line-height: 28px;
+    color: var(--secondary-color);
+}
+
+.header_icons {
+    display: flex;
+    column-gap: 32px;
+}
+
+.header_icon {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.cart_btn {
+    background: transparent;
+    border: none;
+    position: relative;
+}
+
+.cart_btn_result {
+    position: absolute;
+    top: -8px;
+    right: -6px;
+    font-size: 20px;
+    color: yellow;
+}
+
+
+/* main */
+main {
+    background: var(--primary-color-lighter);
+    padding: 80px;
+}
+
+.card_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.product-card {
+    opacity: 0;
+    flex: 1 1 20%;
+    height: 340px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+/* ბარათის გამოჩენა ანიმაციით */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-img-box {
+    background: var(--whithe-color);
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.product-text-content {
+    padding: 0 8px 8px 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 16px;
+    color: var(--primary-color-darkest);
+    font-weight: 700;
+    line-height: 24px;
+    margin-block: 16px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: var(--dangerColor);
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.add-to-cart-btn {
+    border: none;
+    width: 48px;
+    height: 32px;
+    background: var(--light-green);
+    color: var(--primary-color-darkest);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.product-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* pagination buttons  */
+.pageNumbers {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationButton {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--whithe-color);
+    background: var(--primary-color-darkest);
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.active {
+    background: var(--dangerColor);
+}
+
+/* Skeleton card-ის სტილი */
+.skeleton-card {
+    flex: 1 1 20%;
+    height: 260px;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+    background-size: 400% 100%;
+    border-radius: 8px;
+    animation: shimmer 1.2s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+/* Skeleton-ის ანიმაცია */
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0;
+    }
+
+    100% {
+        background-position: 400px 0;
+    }
+}
+
+/* Skeleton-ის სურათის სტილი (იმიტაცია) */
+.skeleton-img {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Skeleton-ის ტექსტი */
+.skeleton-text {
+    width: 80%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Skeleton-ის ფასი */
+.skeleton-price {
+    width: 60%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+
+
+/* cart page  */
+.cartItemsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    background-color: chartreuse;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 5px solid red;
+}
+
+/* footer  */
+footer {
+    padding: 32px 80px;
+    background: var(--primary-color-darkest);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about {
+    width: 300px;
+}
+
+.footer-section_title {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+.footer-section-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    color: var(--primary-color-lighter);
+}
+
+.subscribe-form {
+    display: flex;
+    height: 40px;
+}
+
+.subscribe-input {
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    padding-left: 8px;
+}
+
+.subscribe-btn {
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding-inline: 16px;
+    background: var(--light-green);
+    color: var(--primary-color-darkest);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-newsletter-social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.social-links {
+    display: flex;
+    column-gap: 24px;
+}
+
+.social-links i {
+    font-size: 20px;
+    color: var(--primary-color-lighter);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+}
+
+.footer-bottom-text {
+    font-size: 14px;
+    color: var(--primary-color-darker);
+}
